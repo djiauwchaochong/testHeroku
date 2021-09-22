@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>911 Reports</title>
+</head>
+<body>
+    <h1>911 REPORT</h1><a href="/">Home</a> <a href="/reports">List Report</a>
+    <center><h2>List Report</h2></center>
+    <form>
+      <input type="search" name="sbE" placeholder="Search by event..">
+      <input type="search" name="sbA" placeholder="Search by age..">
+      <input type="submit">
+    </form>
+    <h5>The oldest person is <%= max %>, the youngest person is <%= min %>, and average all age is <%= avg %></h5>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Event</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(var i = 0; i < data.length; i++) { %>
+          <tr>
+            <td><%= data[i].indonesianTime %></td>
+            <td><%= data[i].event %></td>
+            <td><a href="/reports/<%= data[i].id %>">See Detail</a> <a href="/reports/<%= data[i].id %>/delete">Delete</a></td>
+          </tr>
+            <% } %>
+        </tbody>
+      </table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "testheroku",
+  "version": "1.0.0",
+  "description": "Challenge ini di nilai dan hanya 1 bagian 💯.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djiauwchaochong/testHeroku.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djiauwchaochong/testHeroku/issues"
+  },
+  "homepage": "https://github.com/djiauwchaochong/testHeroku#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}

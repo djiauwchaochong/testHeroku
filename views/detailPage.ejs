@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>911 Reports</title>
+</head>
+<body>
+    <h1>911 REPORT</h1><a href="/">Home</a> <a href="/reports">List Report</a>
+    <center><h2>Report Detail <%= data.id %></h2></center>
+    <form action="/reports/<%= data.id %>/edit" method="POST">
+        <img src="<%= data.photo %>" width="300px" height="300px"><br><br><br><br>
+        <label>First Name</label><br>
+        <input type="text" name="firstName" value="<%= data.firstName %>"><br><br>
+        <label>Last Name</label><br>
+        <input type="text" name="lastName" value="<%= data.lastName %>"><br><br>
+        <label>Age</label><br>
+        <input type="number" name="age" value="<%= data.age %>"><br><br>
+        <label>Email</label><br>
+        <input type="text" name="email" value="<%= data.email %>"><br><br>
+        <label>NIK</label><br>
+        <input type="text" name="nik" value="<%= data.nik %>"><br><br>
+        <label>Event</label><br>
+        <input type="text" name="event" value="<%= data.event %>"><br><br>
+        <label>Description</label><br>
+        <textarea rows="4" cols="50" name="description"><%= data.description %></textarea><br><br>
+        <label>Photo</label><br>
+        <input type="text" name="photo" value="<%= data.photo %>"><br><br>
+        <label>Date of Event</label><br>
+        <input type="date" name="dateOfEvent" value="<%= data.editDate %>"><br><br>
+        <input type="submit" class="btn btn-primary" value="Update">
+    </form>
+</body>
+</html>
